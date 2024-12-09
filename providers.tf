@@ -11,5 +11,5 @@ terraform {
 provider "azurerm" {
   #resource_provider_registrations = "none" # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
   features {}
-  subscription_id = "50a1390f-363e-4a28-aa4f-941af322a11c"
+  subscription_id = "87948765-5c07-4a92-819f-251defd8eefd"
 }
