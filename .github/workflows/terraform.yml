@@ -63,12 +63,12 @@ jobs:
       run:
         shell: bash
 
-    steps:
+    
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v4
           
-   - script: |
+    - script: |
       terraform --version
       terraform init -backend-config="storage_account_name=${{ secrets.storageAccountName }}" -backend-config="container_name=${{ secrets.containerName }}" -backend-config="key=${{ secrets.key }}" -backend-config="access_key=${{ secrets.accessKey }}"
       terraform plan
