@@ -1,6 +1,6 @@
 variable "location" {
   type = string
-  # default = "eastus"
+  #default = "eastus"
 }
 
 variable "app_resource_group_name" {
