@@ -68,9 +68,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
           
-    - uses: azure/login@v2
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+   - script: |
+      terraform --version
+      terraform init -backend-config="storage_account_name=${{ secrets.storageAccountName }}" -backend-config="container_name=${{ secrets.containerName }}" -backend-config="key=${{ secrets.key }}" -backend-config="access_key=${{ secrets.accessKey }}"
+      terraform plan
+    displayName: "Terraform Init and Plan"
 
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
