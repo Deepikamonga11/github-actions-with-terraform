@@ -52,8 +52,8 @@ on:
 permissions:
   contents: read
 
-jobs:
-  terraform:
+  jobs:
+   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
     environment: production
