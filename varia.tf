@@ -5,5 +5,5 @@ variable "location" {
 
 variable "app_resource_group_name" {
   type    = string
-  default = "hello-rg"
+  default = "hello-rgg"
 }
