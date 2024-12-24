@@ -15,3 +15,8 @@ module "app_service" {
   resource_group_name = module.app_service_rg.name
 }
 
+module "storage_account" {
+  source = "./modules/storage_account"
+  location = var.location
+  
+}
